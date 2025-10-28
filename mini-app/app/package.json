@@ -1,0 +1,15 @@
+{
+  "name": "tp-docker-miniapp",
+  "version": "1.0.0",
+  "description": "Mini app para TP de Ingeniería de Software - contenerizada con Docker",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "NODE_ENV=development node index.js"
+  },
+  "author": "Brian",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

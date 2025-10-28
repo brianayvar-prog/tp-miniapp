@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TP Docker - Mini App</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main>
+    <h1>TP Docker — Mini App</h1>
+    <p id="message">Cargando mensaje...</p>
+    <button id="refresh">Actualizar mensaje</button>
+  </main>
+  <script>
+    async function fetchMsg() {
+      try {
+        const r = await fetch('/api/hello');
+        const j = await r.json();
+        document.getElementById('message').textContent = j.msg + ' — ' + j.time;
+      } catch (e) {
+        document.getElementById('message').textContent = 'Error al obtener mensaje';
+      }
+    }
+    document.getElementById('refresh').addEventListener('click', fetchMsg);
+    fetchMsg();
+  </script>
+</body>
+</html>
