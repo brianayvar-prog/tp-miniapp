@@ -30,7 +30,6 @@ ci.yml
 
 ## Instrucciones rápidas
 1. Clonar (reemplazar URL):
-```bash
 git clone <URL_REPO>
 cd tp-docker-miniapp
 
